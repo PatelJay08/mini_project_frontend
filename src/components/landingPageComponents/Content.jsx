@@ -2,7 +2,7 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import HomeCard from "./HomeCard"
+import ContentCard from "./ContentCard"
 
 const SampleNextArrow = (props) => {
   const { onClick } = props
@@ -24,7 +24,7 @@ const SamplePrevArrow = (props) => {
     </div>
   )
 }
-const Home = ({ items }) => {
+const Content = ({ items }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -41,7 +41,7 @@ const Home = ({ items }) => {
           {items.map((item) => {
             return (
               <>
-                <HomeCard key={item.id} item={item} />
+                <ContentCard key={item.id} item={item} />
               </>
             )
           })}
@@ -51,4 +51,4 @@ const Home = ({ items }) => {
   )
 }
 
-export default Home
+export default Content

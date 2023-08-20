@@ -19,7 +19,7 @@ const SamplePrevArrow = (props) => {
   const { onClick } = props
   return (
     <div className='control-btn' onClick={onClick}>
-      <button className='prev'>
+      <button className='prev prev--'>
         <i class='fa fa-chevron-left'></i>
       </button>
     </div>

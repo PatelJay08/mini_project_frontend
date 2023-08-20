@@ -15,7 +15,7 @@ export const homeData = [
   {
     id: 2,
     name: "skull island",
-    rating: 4.6,
+    rating: 2.6,
     time: "2hr : 22mins",
     desc: "The island, like its inhabitants, is wholly fictional. Kong's island home in the Pacific makes its first appearance, along with Kong himself, in the 1933 film King Kong. ",
     starring: "Brenda Chapman, Jeff Nathanson",

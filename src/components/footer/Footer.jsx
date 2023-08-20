@@ -1,8 +1,31 @@
-import React from "react"
-import { homeData } from "../../dummyData"
+import React, { useState } from "react"
 import "./footer.css"
+import { storage } from "../firebase/firebaseconf"
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
+import { v4 } from "uuid"
 
 const Footer = () => {
+
+  // function uploadpost(event) {
+  //   let image = event.target.files[0]
+  //   if (image === null || image === undefined)
+  //     return
+
+  //   const storageref = ref(storage, image.name)
+  //   // const storageref = ref(storage, `images/${image.name + v4()}`)
+  //   var uploadTask = uploadBytesResumable(storageref, image)
+  //   uploadTask.on(
+  //     "stage_changed",
+  //     () => {
+  //       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+  //         console.log('File available at', downloadURL);
+  //       })
+  //     }
+  //   )
+  // }
+
+
+
   return (
     <>
       <footer>
@@ -24,7 +47,7 @@ const Footer = () => {
             <i className='fab fa-github'></i>
             <i className='fab fa-instagram'></i>
           </div>
-          <div className='box'>
+          {/* <div className='box'>
             <h3>Streamit App</h3>
             <div className='img flexSB'>
               <img src='https://img.icons8.com/color/48/000000/apple-app-store--v3.png' />
@@ -32,7 +55,9 @@ const Footer = () => {
               <img src='https://img.icons8.com/fluency/48/000000/google-play.png' />
               <span>Google Play Store</span>
             </div>
-          </div>
+          </div> */}
+          {/* <input type="file" onChange={uploadpost} /> */}
+          {/* <button onClick={uploadImage}>Upload Image</button> */}
         </div>
       </footer>
     </>

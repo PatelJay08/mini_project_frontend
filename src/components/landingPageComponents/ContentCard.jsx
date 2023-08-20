@@ -1,7 +1,15 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
-const HomeCard = ({ item: { id, cover, name, rating, time, desc, starring, genres, tags, video } }) => {
+
+const ContentCard = ({ item: { id, cover, name, rating, time, desc, starring, genres, tags, video } }) => {
+
+ const navigate = useNavigate();
+
+ function book(){
+  navigate(`/book`)
+ }
+
   return (
     <>
       <div className='box'>
@@ -38,8 +46,8 @@ const HomeCard = ({ item: { id, cover, name, rating, time, desc, starring, genre
                 {tags}
               </h4>
             </div>
-            <button className='primary-btn'>
-              <i className='fas fa-play'></i> PLAY NOW
+            <button className='primary-btn' onClick={book}>
+              BOOK NOW
             </button>
           </div>
           <div className='palyButton row'>
@@ -59,4 +67,4 @@ const HomeCard = ({ item: { id, cover, name, rating, time, desc, starring, genre
   )
 }
 
-export default HomeCard
+export default ContentCard
